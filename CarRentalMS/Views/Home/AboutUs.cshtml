@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "About Us";
+}
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/style.css"> <!-- Add custom styles -->
+</head>
+<body style="background-color: #FFF5E1; font-family: 'Lato', sans-serif; color: #212529; margin: 0; padding: 0;">
+
+    <!-- About Us Section -->
+    <section class="about-us" style="max-width: 800px; margin: auto; padding: 40px 20px; text-align: center; background: white; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+        <h1 style="font-size: 2.5rem; font-weight: 700; color: #001d3d;">About DRIVENOW</h1>
+        <p style="font-size: 1.1rem; margin: 20px 0; color: #6c757d;">
+            DRIVENOW is your trusted platform for car rentals, offering a seamless and hassle-free experience. With a wide selection of vehicles and exceptional service, we aim to make your journey enjoyable and stress-free.
+        </p>
+
+        <div class="info-boxes" style="display: flex; justify-content: space-between; align-items: center; margin-top: 30px; gap: 20px; flex-wrap: wrap;">
+            <!-- Hotline Box -->
+            <div class="info-box" style="flex: 1; min-width: 200px; padding: 20px; background-color: #f1f3f5; border-radius: 8px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); text-align: center;">
+                <h3 style="font-size: 1.25rem; font-weight: 600; color: #001d3d;">Hotline</h3>
+                <p style="font-size: 1rem; margin: 10px 0; color: #495057;">📞 +1 800 123 4567</p>
+            </div>
+
+            <!-- Operating Hours Box -->
+            <div class="info-box" style="flex: 1; min-width: 200px; padding: 20px; background-color: #f1f3f5; border-radius: 8px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); text-align: center;">
+                <h3 style="font-size: 1.25rem; font-weight: 600; color: #001d3d;">Operating Hours</h3>
+                <p style="font-size: 1rem; margin: 10px 0; color: #495057;">🕒 Mon - Sun: 9:00 AM - 9:00 PM</p>
+            </div>
+            <!-- Why Choose Us Section -->
+            <div class="benefits">
+                <div class="benefit-item">
+                    <h3>Wide Range of Cars</h3>
+                    <p>Choose from a variety of vehicles to suit your needs.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Affordable Prices</h3>
+                    <p>Competitive rates without compromising on quality.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>24/7 Support</h3>
+                    <p>Our team is available round-the-clock to assist you.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Easy Booking</h3>
+                    <p>Quick and hassle-free online reservation process.</p>
+                </div>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<CarRentalMS.Models.Cars>
+
+@{
+    ViewData["Title"] = "Cars Available for Rent";
+}
+
+<div class="cars-container">
+    <h2>@ViewData["Title"]</h2>
+
+    <!-- Check if there are any cars -->
+    @if (!Model.Any())
+    {
+        <h1 class="no-cars-message">No Cars Available for Rent</h1>
+    }
+    else
+    {
+        <!-- Display Cars Table -->
+        <table class="table table-striped cars-table">
+            <thead>
+                <tr>
+                    <th>Car Plate</th>
+                    <th>Car Model</th>
+                    <th>Car Production Year</th>
+                    <th>Car Brand</th>
+                    <th>Price Per Day</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var car in Model)
+                {
+                    <tr>
+                        <td>@car.car_plate</td>
+                        <td>@car.car_model</td>
+                        <td>@car.car_production_year</td>
+                        <td>@car.car_brand</td>
+                        <td>@car.car_price_per_day.ToString("C")</td> <!-- Formats price as currency -->
+                        <td>
+                            <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@car.car_id">Edit</a> |
+                            <a class="btn btn-danger btn-sm" href="javascript:void(0);" onclick="confirmDelete('@car.car_id')">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <!-- Button to Add a New Car -->
+        <a class="btn btn-primary add-car-btn" asp-action="Create">Add New Car</a>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        // JavaScript to confirm delete action
+        function confirmDelete(carId) {
+            if (confirm('Are you sure you want to delete this car?')) {
+                // Redirect to the Delete action
+                window.location.href = '/Cars/Delete/' + carId;
+            }
+        }
+    </script>
+}

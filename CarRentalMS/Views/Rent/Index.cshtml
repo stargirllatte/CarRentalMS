@@ -1,0 +1,35 @@
+﻿@model IEnumerable<CarRentalMS.Models.Rent>
+
+<h2>Rent List</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Car Plate</th>
+            <th>Customer Name</th>
+            <th>Customer ID</th>
+            <th>Rental Date</th>
+            <th>Return Date</th>
+            <th>Total Cost</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var rent in Model)
+        {
+            <tr>
+                <td>@rent.car_plate</td>
+                <td>@rent.customer_name</td>
+                <td>@rent.customer_id</td>
+                <td>@rent.car_rental_date.ToShortDateString()</td>
+                <td>@rent.car_return_date.ToShortDateString()</td>
+                <td>@rent.total_cost_rent.ToString("C")</td>  <!-- Formats price as currency -->
+                <td>
+                    <a asp-action="Edit" asp-route-id="@rent.car_id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@rent.car_id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create">Add New Rental</a>

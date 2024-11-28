@@ -1,0 +1,41 @@
+﻿@model CarRentalMS.Models.Rent
+
+<h2>Edit Rent</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="car_id" /> <!-- Hidden field to store RentID -->
+
+    <div class="form-group">
+        <label asp-for="car_plate" class="control-label">Car Plate</label>
+        <input asp-for="car_plate" class="form-control" />
+        <span asp-validation-for="car_plate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="customer_name" class="control-label">Customer Name</label>
+        <input asp-for="customer_name" class="form-control" />
+        <span asp-validation-for="customer_name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="customer_id" class="control-label">Customer ID</label>
+        <input asp-for="customer_id" class="form-control" />
+        <span asp-validation-for="customer_id" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="car_rental_date" class="control-label">Rental Date</label>
+        <input asp-for="car_rental_date" class="form-control" type="date" />
+        <span asp-validation-for="car_rental_date" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="car_return_date" class="control-label">Return Date</label>
+        <input asp-for="car_return_date" class="form-control" type="date" />
+        <span asp-validation-for="car_return_date" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="total_cost_rent" class="control-label">Total Rent</label>
+        <input asp-for="total_cost_rent" class="form-control" type="number" step="0.01" />
+        <span asp-validation-for="total_cost_rent" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

@@ -1,0 +1,36 @@
+﻿@model CarRentalMS.Models.Cars
+
+<h2>Create New Car</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="car_id" /> <!-- Hidden field to store RentID -->
+
+    <div class="form-group">
+        <label asp-for="car_plate" class="control-label">Car Plate</label>
+        <input asp-for="car_plate" class="form-control" />
+        <span asp-validation-for="car_plate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="car_model" class="control-label">Car Model</label>
+        <input asp-for="car_model" class="form-control" />
+        <span asp-validation-for="car_model" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="car_production_year" class="control-label">Production Year</label>
+        <input asp-for="car_production_year" class="form-control" type="number" />
+        <span asp-validation-for="car_production_year" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="car_brand" class="control-label">Car Brand</label>
+        <input asp-for="car_brand" class="form-control" />
+        <span asp-validation-for="car_brand" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="car_price_per_day" class="control-label">Price Per Day</label>
+        <input asp-for="car_price_per_day" class="form-control" type="number" step="0.01" />
+        <span asp-validation-for="car_price_per_day" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

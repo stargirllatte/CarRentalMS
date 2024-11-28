@@ -1,0 +1,279 @@
+﻿/* General Styles */
+body {
+    font-family: 'Lato';
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc; /* Light background */
+    color: black; /* Font color */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: black; /* Heading color */
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff9c4; /* Soft yellow container color */
+    box-shadow: 0 4px 8px rgba(173, 216, 230, 0.3); /* Soft blue shadow */
+    border-radius: 8px;
+}
+
+button {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+    /* Button Styles */
+    button:hover {
+        transform: scale(1.05);
+    }
+
+    button:active {
+        transform: scale(0.98);
+    }
+
+    /* Edit Car Button */
+    button.edit-car {
+        background-color: pink;
+        color: white;
+    }
+
+        button.edit-car:hover {
+            background-color: #ffb6c1; /* Lighter pink */
+        }
+
+    /* Delete Car Button */
+    button.delete-car {
+        background-color: mediumblue;
+        color: white;
+    }
+
+        button.delete-car:hover {
+            background-color: #4169e1; /* Royal blue */
+        }
+
+    /* Edit Rent Button */
+    button.edit-rent {
+        background-color: mediumblue;
+        color: white;
+    }
+
+        button.edit-rent:hover {
+            background-color: #4169e1; /* Royal blue */
+        }
+
+    /* Delete Rent Button */
+    button.delete-rent {
+        background-color: pink;
+        color: white;
+    }
+
+        button.delete-rent:hover {
+            background-color: #ffb6c1; /* Lighter pink */
+        }
+
+/* Pages Specific Styles */
+
+/* Homepage */
+.homepage-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.homepage-intro {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+/* Car Page */
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.car-item {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #fff9c4; /* Soft yellow container color */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(173, 216, 230, 0.3); /* Soft blue shadow */
+}
+
+    .car-item h3 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+/* Rent Page */
+.rent-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+    .rent-form label {
+        font-weight: bold;
+    }
+
+    .rent-form input, .rent-form select, .rent-form textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+/* About Us Page */
+.about-us {
+    text-align: center;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+    .about-us img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+
+/* Help Page */
+.help-page h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* FAQ */
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+    .faq-item .question {
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+        .faq-item .question:hover {
+            color: mediumblue;
+        }
+
+    .faq-item .answer {
+        margin-top: 10px;
+        display: none;
+        font-size: 16px;
+    }
+
+/* Contact Us Page */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+    .contact-form label {
+        font-weight: bold;
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .contact-form button {
+        background-color: mediumblue;
+        color: white;
+    }
+
+/* How to Book Page */
+/* General Styling for the How-to-Book Page */
+.how-to-book-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    /* Header Styling */
+    .how-to-book-container h1 {
+        font-family: 'Lato', sans-serif;
+        font-size: 32px;
+        color: black; /* Minimalist black */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+/* Step List Styling */
+.steps-list {
+    font-family: 'Lato', sans-serif;
+    color: #6c757d; /* Subtle gray for text */
+    line-height: 1.8;
+    padding-left: 20px;
+}
+
+    .steps-list li {
+        margin-bottom: 10px;
+    }
+
+    .steps-list a {
+        color: #5bc0de; /* Soft blue for links */
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .steps-list a:hover {
+            color: #3498db; /* Slightly darker blue on hover */
+            text-decoration: underline;
+        }
+
+/* Help Links Styling */
+.help-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+    .help-links .help-link {
+        color: #5bc0de; /* Soft blue */
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .help-links .help-link:hover {
+            color: #3498db; /* Darker blue */
+            text-decoration: underline;
+        }
+
+/* Button Styling */
+.btn-primary {
+    background-color: #5bc0de; /* Soft blue */
+    border-color: #5bc0de;
+    font-weight: bold;
+}
+
+    .btn-primary:hover {
+        background-color: #3498db; /* Darker blue */
+        border-color: #3498db;
+    }
+

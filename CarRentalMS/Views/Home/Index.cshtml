@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/custom-style.css" />
+}
+
+<div class="homepage">
+    <!-- Hero Section with DriveNow Logo -->
+    <div class="container text-center mt-4">
+        <img src="~/images/drivenow2020.png" alt="DRIVENOW Logo" class="img-fluid" style="width: 100%; height: auto;" />
+    </div>
+
+    <div class="hero-overlay">
+        <h1 class="mt-4">Welcome to DRIVE NOW</h1>
+        <p>Your trusted car rental service since 2024.</p>
+        <!-- 'Book Now' button centered below the text -->
+        <div class="button-container mt-3">
+            <a href="@Url.Action("Index", "Rent")" class="btn btn-book-now">Book Now</a>
+        </div>
+    </div>
+</div>
